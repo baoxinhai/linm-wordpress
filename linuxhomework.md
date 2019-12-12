@@ -1,168 +1,168 @@
-# - ÊÖ¶¯±àÒë°²×°£¬²¢ÅäÖÃ£¬Õı³£ÔËĞĞÒÔÏÂÏµÍ³ -
+# - æ‰‹åŠ¨ç¼–è¯‘å®‰è£…ï¼Œå¹¶é…ç½®ï¼Œæ­£å¸¸è¿è¡Œä»¥ä¸‹ç³»ç»Ÿ -
 
 
 ## 1. **linux**
 
-* °æ±¾ºÅ£ºUbuntu 18.04
+* ç‰ˆæœ¬å·ï¼šUbuntu 18.04
 ---
 
 ## 2. **Nginx**
 
-  £¨1£©¸üĞÂÈí¼şÔ´
+  ï¼ˆ1ï¼‰æ›´æ–°è½¯ä»¶æº
 
   ```
  sudo apt-get update
   ```
-  ![nginx](./pictures/nginx.png)
+  ![nginx](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx.png)
   
-  £¨2£©°²×°nginx
+  ï¼ˆ2ï¼‰å®‰è£…nginx
   ```
   sudo apt-get install nginx
   ```
-   ![nginx2](./pictures/nginx2.png) 
+   ![nginx2](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx2.png) 
   
-  £¨3£©¼ì²éÅäÖÃÎÄ¼şÊÇ·ñÕıÈ·&&ÅäÖÃnginx
+  ï¼ˆ3ï¼‰æ£€æŸ¥é…ç½®æ–‡ä»¶æ˜¯å¦æ­£ç¡®&&é…ç½®nginx
   
-   ¼ì²éÅäÖÃÎÄ¼şÊÇ·ñÕıÈ·£º
+   æ£€æŸ¥é…ç½®æ–‡ä»¶æ˜¯å¦æ­£ç¡®ï¼š
   ```
   nginx -t
   ```
-  ![nginx6](./pictures/nginx6.png)
+  ![nginx6](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx6.png)
   
   ---
-  **ÈİÒ×³öÏÖµÄÎÊÌâ**£ºÈç¹û²»ÔÚrootÓÃ»§ÏÂ£¬»áÏÔÊ¾
-  permission denied £» ËùÒÔÎÒÃÇÒªÇĞ»»µ½rootÓÃ»§ÒÔ»ñÈ¡È¨ÏŞ
+  **å®¹æ˜“å‡ºç°çš„é—®é¢˜**ï¼šå¦‚æœä¸åœ¨rootç”¨æˆ·ä¸‹ï¼Œä¼šæ˜¾ç¤º
+  permission denied ï¼› æ‰€ä»¥æˆ‘ä»¬è¦åˆ‡æ¢åˆ°rootç”¨æˆ·ä»¥è·å–æƒé™
 
 ---
-  ÅäÖÃÎÄ¼ş£º
+  é…ç½®æ–‡ä»¶ï¼š
   ```
   sudo vi /etc/nginx/nginx.conf
-  °Ñuser www.data¸ÄÎªuser root
+  æŠŠuser www.dataæ”¹ä¸ºuser root
   ```
-  ![nginx8](./pictures/nginx8.png)
+  ![nginx8](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx8.png)
 
   ---
-  /etc/nginx ÏÂµÄÅäÖÃÎÄ¼ş½á¹¹
-  ![nginx9](./pictures/nginx9.png)
+  /etc/nginx ä¸‹çš„é…ç½®æ–‡ä»¶ç»“æ„
+  ![nginx9](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx9.png)
 
-  £¨4£©Æô¶¯nginx·şÎñ
+  ï¼ˆ4ï¼‰å¯åŠ¨nginxæœåŠ¡
    ```
     sudo /etc/init.d/nginx start
    ```
-   ![nginx3](./pictures/nginx3.png)
+   ![nginx3](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx3.png)
 
-  £¨5£©ä¯ÀÀÆ÷Æô¶¯nginx·şÎñ
-  ÔÚä¯ÀÀÆ÷ÖĞÊäÈëlocalhost
-  ![nginx4](./pictures/nginx4.png)
+  ï¼ˆ5ï¼‰æµè§ˆå™¨å¯åŠ¨nginxæœåŠ¡
+  åœ¨æµè§ˆå™¨ä¸­è¾“å…¥localhost
+  ![nginx4](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx4.png)
 
-  £¨6£©ÆäËûÃüÁî
-  ![nginx5](./pictures/nginx5.png)
+  ï¼ˆ6ï¼‰å…¶ä»–å‘½ä»¤
+  ![nginx5](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/nginx5.png)
 
   ---
 
   
 ## 3. **Mysql**
- £¨1£©Ê×ÏÈ¼ì²éÏµÍ³ÖĞÊÇ·ñ°²×°ÁËmysql
+ ï¼ˆ1ï¼‰é¦–å…ˆæ£€æŸ¥ç³»ç»Ÿä¸­æ˜¯å¦å®‰è£…äº†mysql
   ```
   sudo netstart -tap|grep mysql
   ```
-  Ã»ÓĞ·´Ó¦£¬Ã»ÓĞÏÔÊ¾ÒÑ°²×°½á¹û
+  æ²¡æœ‰ååº”ï¼Œæ²¡æœ‰æ˜¾ç¤ºå·²å®‰è£…ç»“æœ
 
-   £¨2£©°²×°mysql
+   ï¼ˆ2ï¼‰å®‰è£…mysql
    ```
    sudo apt-get install mysqp-server mysql-server
    ```
-   ![mysql1](./pictures/mysql1.png)
+   ![mysql1](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/mysql1.png)
 
    ---
-   **ÎÊÌâ³öÏÖ** £ºE£ºÎŞ·¨»ñµÃËø /var/lib/dpkg/lock-fronted(11: ×ÊÔ´²»¿ÉÓÃ)
+   **é—®é¢˜å‡ºç°** ï¼šEï¼šæ— æ³•è·å¾—é” /var/lib/dpkg/lock-fronted(11: èµ„æºä¸å¯ç”¨)
 
-   **ÎÊÌâÔ­Òò** £ºÔÚubuntuÏµÍ³µÄtermialÏÂ£¬ÓÃapt-get install °²×°Èí¼şµÄÊ±ºò£¬Èç¹ûÔÚÎ´Íê³ÉÏÂÔØµÄÇé¿öÏÂ½«terminal close¡£´ËÊ± apt-get½ø³Ì¿ÉÄÜÃ»ÓĞ½áÊø¡£½á¹û£¬Èç¹ûÔÙ´ÎÔËĞĞapt-get install ÃüÁî°²×°Èç½ñ£¬¿ÉÄÜ»á·¢ÉúÏÂÃæµÄÌáÊ¾£º
+   **é—®é¢˜åŸå› ** ï¼šåœ¨ubuntuç³»ç»Ÿçš„termialä¸‹ï¼Œç”¨apt-get install å®‰è£…è½¯ä»¶çš„æ—¶å€™ï¼Œå¦‚æœåœ¨æœªå®Œæˆä¸‹è½½çš„æƒ…å†µä¸‹å°†terminal closeã€‚æ­¤æ—¶ apt-getè¿›ç¨‹å¯èƒ½æ²¡æœ‰ç»“æŸã€‚ç»“æœï¼Œå¦‚æœå†æ¬¡è¿è¡Œapt-get install å‘½ä»¤å®‰è£…å¦‚ä»Šï¼Œå¯èƒ½ä¼šå‘ç”Ÿä¸‹é¢çš„æç¤ºï¼š
  
- ÎŞ·¨»ñµÃËø /var/lib/dpkg/lock - open (11: ×ÊÔ´ÔİÊ±²»¿ÉÓÃ)
-ÎŞ·¨Ëø¶¨¹ÜÀíÄ¿Â¼(/var/lib/dpkg/)£¬ÊÇ·ñÓĞÆäËû½ø³ÌÕıÕ¼ÓÃËü£¿
+ æ— æ³•è·å¾—é” /var/lib/dpkg/lock - open (11: èµ„æºæš‚æ—¶ä¸å¯ç”¨)
+æ— æ³•é”å®šç®¡ç†ç›®å½•(/var/lib/dpkg/)ï¼Œæ˜¯å¦æœ‰å…¶ä»–è¿›ç¨‹æ­£å ç”¨å®ƒï¼Ÿ
 
 
-   **ÎÊÌâ½â¾ö** £º
+   **é—®é¢˜è§£å†³** ï¼š
    ```
    ps -aux
    ```
-   ÕÒµ½º¬ÓĞapt-getµÄ½ø³ÌidºÅ
+   æ‰¾åˆ°å«æœ‰apt-getçš„è¿›ç¨‹idå·
    ```
    sudo kill id
    ```
-   ÎÊÌâ¼´¿É½â¾ö
+   é—®é¢˜å³å¯è§£å†³
 
 ---
- ÔÙ´ÎÖ´ĞĞÉÏÊöµÄ°²×°²Ù×÷Ö¸Áî
- ![mysql2](./pictures/mysql2.png)
- ³É¹¦°²×°mysql
+ å†æ¬¡æ‰§è¡Œä¸Šè¿°çš„å®‰è£…æ“ä½œæŒ‡ä»¤
+ ![mysql2](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/mysql2.png)
+ æˆåŠŸå®‰è£…mysql
 
- £¨3£©²âÊÔ°²×°ÊÇ·ñ³É¹¦&&±¾µØµÇÂ¼mysql²âÊÔ
+ ï¼ˆ3ï¼‰æµ‹è¯•å®‰è£…æ˜¯å¦æˆåŠŸ&&æœ¬åœ°ç™»å½•mysqlæµ‹è¯•
  ```
  sudo netstat -tap|grep mysql
  mysql -uroot -p
  ```
- ![mysql3](./pictures/mysql3.png)
+ ![mysql3](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/mysql3.png)
 
- £¨4£©¶ÔÊı¾İ¿â½øĞĞ¼òµ¥²Ù×÷ ´´½¨ºÍ²é¿´²Ù×÷
+ ï¼ˆ4ï¼‰å¯¹æ•°æ®åº“è¿›è¡Œç®€å•æ“ä½œ åˆ›å»ºå’ŒæŸ¥çœ‹æ“ä½œ
  ```
  create database bxh;
  shwget http://php.net/distributions/php-7.2.2.tar.gz ow databases;
  ```
- ![mysql4](./pictures/mysql4.png)
+ ![mysql4](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/mysql4.png)
 
 ---
 ## 4.**Php**
-(1)ÏÂÔØphpÎÄ¼ş
+(1)ä¸‹è½½phpæ–‡ä»¶
 ```
 wget https://php.net/distributions/php-7.2.2.tar.gz
 ```
-![php1](./pictures/php1.png)
-£¨2£©½âÑ¹
+![php1](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php1.png)
+ï¼ˆ2ï¼‰è§£å‹
 ```
 tar -zxvf php-7.2.2.tar.gz
 ```
-£¨3£©½øÈë½âÑ¹Ä¿Â¼
+ï¼ˆ3ï¼‰è¿›å…¥è§£å‹ç›®å½•
 ```
 cd php-7.2.2
 ```
-£¨4£©Ô¤±àÒë
+ï¼ˆ4ï¼‰é¢„ç¼–è¯‘
 ```
 sudo ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm
 ```
 ---
-**³öÏÖµÄÎÊÌâ**£º
+**å‡ºç°çš„é—®é¢˜**ï¼š
 
-![php2](./pictures/php2.png)
-**ÎÊÌâÔ­Òò**£º
+![php2](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php2.png)
+**é—®é¢˜åŸå› **ï¼š
 
-Ã»ÓĞ°²×°libxml2
+æ²¡æœ‰å®‰è£…libxml2
 
-**ÎÊÌâ½â¾ö**£º
+**é—®é¢˜è§£å†³**ï¼š
 ```
  sudo apt-get install libxml2
  sudo apt-get install libxml2-dev
 ```
 
 ---
-ÖØĞÂÖ´ĞĞÔ¤±àÒëÖ¸Áîºó£º
+é‡æ–°æ‰§è¡Œé¢„ç¼–è¯‘æŒ‡ä»¤åï¼š
 ![php4](./pictures/php4.png)
 
-£¨5£©±àÒëphp
+ï¼ˆ5ï¼‰ç¼–è¯‘php
 ```
 sudo make
 ```
-£¡£¡£¡¾­ÀúÁË**ºÜ³¤Ò»¶ÎÊ±¼ä**µÄ±àÒë£¬ÖÕÓÚ±àÒë³É¹¦ÁË£¬´óÔ¼»¨ÁËÊ®·ÖÖÓ×óÓÒ£¬µçÄÔCPU ±»Õ¼ÓÃÁË²»ÉÙ£¬·çÉÈµÄÉùÒôÒ²Ê®·Ö´ó
+ï¼ï¼ï¼ç»å†äº†**å¾ˆé•¿ä¸€æ®µæ—¶é—´**çš„ç¼–è¯‘ï¼Œç»ˆäºç¼–è¯‘æˆåŠŸäº†ï¼Œå¤§çº¦èŠ±äº†ååˆ†é’Ÿå·¦å³ï¼Œç”µè„‘CPU è¢«å ç”¨äº†ä¸å°‘ï¼Œé£æ‰‡çš„å£°éŸ³ä¹Ÿååˆ†å¤§
 
-![php5](./pictures/php5.png)
+![php5](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php5.png)
 
-£¨6£©°²×°php
+ï¼ˆ6ï¼‰å®‰è£…php
 ```
 sudo install php
 ```
-![php6](./pictures/php6.png)
-£¨7£©ĞŞ¸ÄÅäÖÃÎÄ¼ş
+![php6](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php6.png)
+ï¼ˆ7ï¼‰ä¿®æ”¹é…ç½®æ–‡ä»¶
 ```
 cd /usr/local/php/etc 
 sudo cp php-fpm.conf.default php-fpm.conf 
@@ -170,119 +170,119 @@ cd /usr/local/php/etc/php-fpm.d
 sudo cp www.conf.default www.conf 
 ```
 
-Ìí¼ÓwwwÓÃ»§ºÍ×é
+æ·»åŠ wwwç”¨æˆ·å’Œç»„
 ```
 sudo groupadd www 
 sudo useradd -g www www 
 ```
-ĞŞ¸Äwww.confÖĞµÄËùÊô×éºÍÓÃ»§
+ä¿®æ”¹www.confä¸­çš„æ‰€å±ç»„å’Œç”¨æˆ·
 ```
 user=www
 group=www
 ```
-![php7](./pictures/php7.png)
+![php7](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php7.png)
 
-£¨8£©ĞŞ¸Änginx.confÒÔÖ§³Öphp-fpm
+ï¼ˆ8ï¼‰ä¿®æ”¹nginx.confä»¥æ”¯æŒphp-fpm
 
-£¨9£©´´½¨php²âÊÔÎÄ¼ş
-ÔÚ/usr/local/nginx/html ÏÂ´´½¨index.phpÎÄ¼ş
+ï¼ˆ9ï¼‰åˆ›å»ºphpæµ‹è¯•æ–‡ä»¶
+åœ¨/usr/local/nginx/html ä¸‹åˆ›å»ºindex.phpæ–‡ä»¶
  ```
  <?php
   echo phpinfo();
  ?>
  ```
- £¨10£©Æô¶¯php-fpm·şÎñ nginx·şÎñÒÑÆô¶¯
+ ï¼ˆ10ï¼‰å¯åŠ¨php-fpmæœåŠ¡ nginxæœåŠ¡å·²å¯åŠ¨
  ```
  /usr/local/php/sbin/php-fpm start
  ```
- £¨11£©·ÃÎÊä¯ÀÀÆ÷
+ ï¼ˆ11ï¼‰è®¿é—®æµè§ˆå™¨
  http://localhost/index.php
- ![php10](./pictures/php10.png)
+ ![php10](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/php10.png)
  
 
 
 ## 5.**Wordpress**
 
-£¨1£©×¼±¸°²×°wordpressÊı¾İ¿â
+ï¼ˆ1ï¼‰å‡†å¤‡å®‰è£…wordpressæ•°æ®åº“
 
-   *ÒÔrootÉí·İ½øÈëmysql*
+   *ä»¥rootèº«ä»½è¿›å…¥mysql*
 ```
 sudo mysql -u root
 ```
- *´´½¨Ò»¸öwordpressÊı¾İ¿â*
+ *åˆ›å»ºä¸€ä¸ªwordpressæ•°æ®åº“*
  ```
  create database wordpress;
 ```
-*´´½¨Ò»¸öÓÃ»§bxhÊÚÓèËûwordpressÊı¾İ¿âµÄÈ«²¿È¨ÏŞ*
+*åˆ›å»ºä¸€ä¸ªç”¨æˆ·bxhæˆäºˆä»–wordpressæ•°æ®åº“çš„å…¨éƒ¨æƒé™*
 ```
 create user 'bxh' identified by '1113';
 grant all privileges on wordpress.* to 'bxh';
 ```
-*ÍË³ö*
+*é€€å‡º*
 ```
 quit
 ```
 
-£¨2£©ÏÂÔØwordpress°²×°°ü
+ï¼ˆ2ï¼‰ä¸‹è½½wordpresså®‰è£…åŒ…
 ```
 wget https://cn.wordpress.org/wordpress-4.7.4-zh_CN.zip
 ```
-![w1](./pictures/w1.png)
+![w1](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/w1.png)
 
 ---
-**³öÏÖµÄÎÊÌâ**£º´íÎó429£ºToo many requests.
+**å‡ºç°çš„é—®é¢˜**ï¼šé”™è¯¯429ï¼šToo many requests.
 
-**ÎÊÌâµÄÔ­Òò**£º
-1. ½ü¼¸ÈÕÓĞÖĞ¹ú´óÂ½µÄÁ÷Á¿¶Ô wordpress.org ·¢ÆğÃÍÁÒ¹¥»÷¡£
+**é—®é¢˜çš„åŸå› **ï¼š
+1. è¿‘å‡ æ—¥æœ‰ä¸­å›½å¤§é™†çš„æµé‡å¯¹ wordpress.org å‘èµ·çŒ›çƒˆæ”»å‡»ã€‚
 
-2. ¹¥»÷µ¼ÖÂÆä¹ÙÍøCDNÃæÏò´óÂ½µÄ·´´ú·şÎñÆ÷NginxÕë¶Ô¸ÃÓòÃû×Ô¶¯Í£°Ú¡£
+2. æ”»å‡»å¯¼è‡´å…¶å®˜ç½‘CDNé¢å‘å¤§é™†çš„åä»£æœåŠ¡å™¨Nginxé’ˆå¯¹è¯¥åŸŸåè‡ªåŠ¨åœæ‘†ã€‚
 
-3. ¹ÙÍøÓĞµÄ°®ºÃÕß²¢²»ÖªµÀÃæÏò´óÂ½µÄCDNËù´¦Çé¿ö£¬ËûÃÇ×Ô¼ºÄÜ·ÃÎÊËùÒÔÈÏÎªÃ»ÎÊÌâ¡£
+3. å®˜ç½‘æœ‰çš„çˆ±å¥½è€…å¹¶ä¸çŸ¥é“é¢å‘å¤§é™†çš„CDNæ‰€å¤„æƒ…å†µï¼Œä»–ä»¬è‡ªå·±èƒ½è®¿é—®æ‰€ä»¥è®¤ä¸ºæ²¡é—®é¢˜ã€‚
 
-**ÎÊÌâµÄ½â¾ö**£º
+**é—®é¢˜çš„è§£å†³**ï¼š
 
-1. ¸´ÖÆWordPressÏÂÔØµØÖ·
+1. å¤åˆ¶WordPressä¸‹è½½åœ°å€
 
-   Ó¢ÎÄ°æµØÖ·£ºhttps://wordpress.org/latest.zip
+   è‹±æ–‡ç‰ˆåœ°å€ï¼šhttps://wordpress.org/latest.zip
 
-   ÖĞÎÄ°æµØÖ·£ºhttps://cn.wordpress.org/latest-zh_CN.zip
+   ä¸­æ–‡ç‰ˆåœ°å€ï¼šhttps://cn.wordpress.org/latest-zh_CN.zip
 
-2. ´ò¿ªÏÂÔØÈí¼ş£¨±ÈÈç£ºÑ¸À× £©£¬ĞÂ½¨ÏÂÔØÈÎÎñ
+2. æ‰“å¼€ä¸‹è½½è½¯ä»¶ï¼ˆæ¯”å¦‚ï¼šè¿…é›· ï¼‰ï¼Œæ–°å»ºä¸‹è½½ä»»åŠ¡
 
-3. ¸´ÖÆÕ³ÌùÉÏÃæµÄÏÂÔØµØÖ·¼´¿ÉÕı³£ÏÂÔØÁË¡£
+3. å¤åˆ¶ç²˜è´´ä¸Šé¢çš„ä¸‹è½½åœ°å€å³å¯æ­£å¸¸ä¸‹è½½äº†ã€‚
 
-   ×îºó£¬Í¨¹ıX-FTPÉÏ´«×îĞÂ°æWordPress³ÌĞòÀ´¸²¸ÇÊÖ¶¯¸üĞÂ¼´¿É¡£
+   æœ€åï¼Œé€šè¿‡X-FTPä¸Šä¼ æœ€æ–°ç‰ˆWordPressç¨‹åºæ¥è¦†ç›–æ‰‹åŠ¨æ›´æ–°å³å¯ã€‚
 ---
-£¨3£©½«wordpress°²×°°ü½âÑ¹£¬·ÅÖÃµ½nginx·şÎñÆ÷µÄ¸ùÄ¿Â¼£¬ÕâÀïÊÇ/var/www/html/wordpress
+ï¼ˆ3ï¼‰å°†wordpresså®‰è£…åŒ…è§£å‹ï¼Œæ”¾ç½®åˆ°nginxæœåŠ¡å™¨çš„æ ¹ç›®å½•ï¼Œè¿™é‡Œæ˜¯/var/www/html/wordpress
 
-£¨4£©ÔÚä¯ÀÀÆ÷ÖĞÊäÈë*https://localhost/wordpress*,»á×Ô¶¯¿ªÊ¼wordpressµÄ°²×°
+ï¼ˆ4ï¼‰åœ¨æµè§ˆå™¨ä¸­è¾“å…¥*https://localhost/wordpress*,ä¼šè‡ªåŠ¨å¼€å§‹wordpressçš„å®‰è£…
 
-![w2](./pictures/w2.png)
+![w2](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/w2.png)
 
-£¨4£©µã»÷let's go£¬È»ºó°´ÕÕÖ®Ç°ÔÚmysqlÀïÃæ´´½¨µÄwordpressÊı¾İ¿âÌîĞ´ÏàÓ¦µÄusernameºÍpassword£¬È»ºóµã»÷submit°´Å¥½øĞĞÏÂÒ»²½
+ï¼ˆ4ï¼‰ç‚¹å‡»let's goï¼Œç„¶åæŒ‰ç…§ä¹‹å‰åœ¨mysqlé‡Œé¢åˆ›å»ºçš„wordpressæ•°æ®åº“å¡«å†™ç›¸åº”çš„usernameå’Œpasswordï¼Œç„¶åç‚¹å‡»submitæŒ‰é’®è¿›è¡Œä¸‹ä¸€æ­¥
 
-£¨5£©ÔÚÖ®Ç°nginx¸ùÄ¿Â¼¡°/var/www/html/wordpress¡±Ä¿Â¼ÏÂÃæĞÂ½¨Ò»¸öwp-config.phpÎÄ¼ş£¬½«ÏÂÃæ¸ßÁÁ²¿·ÖµÄ´úÂë¸´ÖÆµ½wp-config.phpÎÄ¼şÀïÃæ£¬È»ºóµã»÷¡°Run the installation¡±°´Å¥½øĞĞÏÂÒ»²½°²×°¡£
-![w3](./pictures/w3.png)
+ï¼ˆ5ï¼‰åœ¨ä¹‹å‰nginxæ ¹ç›®å½•â€œ/var/www/html/wordpressâ€ç›®å½•ä¸‹é¢æ–°å»ºä¸€ä¸ªwp-config.phpæ–‡ä»¶ï¼Œå°†ä¸‹é¢é«˜äº®éƒ¨åˆ†çš„ä»£ç å¤åˆ¶åˆ°wp-config.phpæ–‡ä»¶é‡Œé¢ï¼Œç„¶åç‚¹å‡»â€œRun the installationâ€æŒ‰é’®è¿›è¡Œä¸‹ä¸€æ­¥å®‰è£…ã€‚
+![w3](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/w3.png)
 
-£¨6£©ÌîĞ´ÍøÕ¾Ãû³Æ£¬ºóÌ¨¹ÜÀíÔ±ÓÃ»§Ãû£¬ºóÌ¨ÃÜÂë£¬ÁªÏµÓÊÏäĞÅÏ¢£¬²¢ÇÒµã»÷Í¬ÒâÉêÃ÷£¬È»ºóµã»÷¡°Install Wordpress¡±°´Å¥£¬¿ªÊ¼ÕıÊ½µÄ°²×°wordpress³ÌĞò
-
----
-**³öÏÖµÄÎÊÌâ¼°½â¾ö**£º*¡°Discourage search engines from indexing this site¡±Õâ¸öÑ¡Ïî²»ÄÜ¹´Ñ¡£¬²»È»µÄ»°ËÑË÷ÒıÇæ¾Í²»»áÊÕÂ¼wordpressÕ¾µãÁË£¡*
----
----
-£¨7£©°²×°³É¹¦£¬È»ºóÊäÈëÊı¾İ¿âÖĞÉèÖÃµÄÓÃ»§ÃûºÍÃÜÂë¼´¿É½øÈëµ½wordpressµÄºóÌ¨
-
-![w4](./pictures/w4.png)
-
-£¨8£©³É¹¦°²×°wordpress
-
-ps£º¹ØÓÚwordpressµÄ¼òµ¥½éÉÜ
-
-**WordPressÊÇÊ¹ÓÃPHPÓïÑÔ¿ª·¢µÄ²©¿ÍÆ½Ì¨£¬ÓÃ»§¿ÉÒÔÔÚÖ§³ÖPHPºÍMySQLÊı¾İ¿âµÄ·şÎñÆ÷ÉÏ¼ÜÉèÊôÓÚ×Ô¼ºµÄÍøÕ¾¡£Ò²¿ÉÒÔ°Ñ WordPressµ±×÷Ò»¸öÄÚÈİ¹ÜÀíÏµÍ³£¨CMS£©À´Ê¹ÓÃ¡£
-WordPressÊÇÒ»¿î¸öÈË²©¿ÍÏµÍ³£¬²¢Öğ²½Ñİ»¯³ÉÒ»¿îÄÚÈİ¹ÜÀíÏµÍ³Èí¼ş£¬ËüÊÇÊ¹ÓÃPHPÓïÑÔºÍMySQLÊı¾İ¿â¿ª·¢µÄ,ÓÃ»§¿ÉÒÔÔÚÖ§³Ö PHP ºÍ MySQLÊı¾İ¿âµÄ·şÎñÆ÷ÉÏÊ¹ÓÃ×Ô¼ºµÄ²©¿Í¡£**  --°Ù¶È°Ù¿Æ
+ï¼ˆ6ï¼‰å¡«å†™ç½‘ç«™åç§°ï¼Œåå°ç®¡ç†å‘˜ç”¨æˆ·åï¼Œåå°å¯†ç ï¼Œè”ç³»é‚®ç®±ä¿¡æ¯ï¼Œå¹¶ä¸”ç‚¹å‡»åŒæ„ç”³æ˜ï¼Œç„¶åç‚¹å‡»â€œInstall Wordpressâ€æŒ‰é’®ï¼Œå¼€å§‹æ­£å¼çš„å®‰è£…wordpressç¨‹åº
 
 ---
-×Ü½á£º¾­¹ıÁËÉÏÊö°²×°ÓëÅäÖÃ£¬ÎÒÃÇ³É¹¦µÄ´î½¨ÁËlnmp»·¾³+wordpress£¬ÔÚ°²×°ºÍÅäÖÃµÄ¹ı³ÌÁË¸ü¼ÓÊìÏ¤ÁËlinuxÏÂµÄshellÖ¸Áî±à³ÌÒÔ¼°linuxµÄÎÄ¼ş×éÖ¯½á¹¹£¬ÁË½âÁË¸÷¸öÎÄ¼ş¼ĞµÄ×÷ÓÃºÍ¹¦ÄÜ£¬ÎªÉîÈëµÄÀí½âlinuxºÍlinuxÕâÃÅ¿ÎµÄÑ§Ï°´òÏÂÁËÁ¼ºÃµÄ»ù´¡¡£Í¨¹ı×Ô¼º¶¯ÊÖÅäÖÃ°²×°£¬²»½ö¶ÍÁ¶ÁËÎÒÃÇµÄ¶¯ÊÖÄÜÁ¦£¬»¹ÔÚ¼ÇÂ¼°²×°±àÒë¿ª·¢µÄ¹ı³ÌÖĞ¶ÍÁ¶ÁËÎÒÃÇÎÄµµµÄÊéĞ´ÄÜÁ¦£¬ÈçºÎ×éÖ¯ºÃ×Ô¼ºµÄÅäÖÃ¹ı³Ì²¢ÇÒÓÃÎÄµµĞÎÊ½¼ÇÂ¼ÊÇÊ®·ÖÖØÒªµÄ£¬Îª½ñºóµÄ¸üºÃµÄÑ§Ï°linux´òÏÂÁËÁ¼ºÃµÄ»ù´¡¡£
+**å‡ºç°çš„é—®é¢˜åŠè§£å†³**ï¼š*â€œDiscourage search engines from indexing this siteâ€è¿™ä¸ªé€‰é¡¹ä¸èƒ½å‹¾é€‰ï¼Œä¸ç„¶çš„è¯æœç´¢å¼•æ“å°±ä¸ä¼šæ”¶å½•wordpressç«™ç‚¹äº†ï¼*
+---
+---
+ï¼ˆ7ï¼‰å®‰è£…æˆåŠŸï¼Œç„¶åè¾“å…¥æ•°æ®åº“ä¸­è®¾ç½®çš„ç”¨æˆ·åå’Œå¯†ç å³å¯è¿›å…¥åˆ°wordpressçš„åå°
+
+![w4](https://github.com/baoxinhai/linm-wordpress/blob/master/pictures/w4.png)
+
+ï¼ˆ8ï¼‰æˆåŠŸå®‰è£…wordpress
+
+psï¼šå…³äºwordpressçš„ç®€å•ä»‹ç»
+
+**WordPressæ˜¯ä½¿ç”¨PHPè¯­è¨€å¼€å‘çš„åšå®¢å¹³å°ï¼Œç”¨æˆ·å¯ä»¥åœ¨æ”¯æŒPHPå’ŒMySQLæ•°æ®åº“çš„æœåŠ¡å™¨ä¸Šæ¶è®¾å±äºè‡ªå·±çš„ç½‘ç«™ã€‚ä¹Ÿå¯ä»¥æŠŠ WordPresså½“ä½œä¸€ä¸ªå†…å®¹ç®¡ç†ç³»ç»Ÿï¼ˆCMSï¼‰æ¥ä½¿ç”¨ã€‚
+WordPressæ˜¯ä¸€æ¬¾ä¸ªäººåšå®¢ç³»ç»Ÿï¼Œå¹¶é€æ­¥æ¼”åŒ–æˆä¸€æ¬¾å†…å®¹ç®¡ç†ç³»ç»Ÿè½¯ä»¶ï¼Œå®ƒæ˜¯ä½¿ç”¨PHPè¯­è¨€å’ŒMySQLæ•°æ®åº“å¼€å‘çš„,ç”¨æˆ·å¯ä»¥åœ¨æ”¯æŒ PHP å’Œ MySQLæ•°æ®åº“çš„æœåŠ¡å™¨ä¸Šä½¿ç”¨è‡ªå·±çš„åšå®¢ã€‚**  --ç™¾åº¦ç™¾ç§‘
+
+---
+æ€»ç»“ï¼šç»è¿‡äº†ä¸Šè¿°å®‰è£…ä¸é…ç½®ï¼Œæˆ‘ä»¬æˆåŠŸçš„æ­å»ºäº†lnmpç¯å¢ƒ+wordpressï¼Œåœ¨å®‰è£…å’Œé…ç½®çš„è¿‡ç¨‹äº†æ›´åŠ ç†Ÿæ‚‰äº†linuxä¸‹çš„shellæŒ‡ä»¤ç¼–ç¨‹ä»¥åŠlinuxçš„æ–‡ä»¶ç»„ç»‡ç»“æ„ï¼Œäº†è§£äº†å„ä¸ªæ–‡ä»¶å¤¹çš„ä½œç”¨å’ŒåŠŸèƒ½ï¼Œä¸ºæ·±å…¥çš„ç†è§£linuxå’Œlinuxè¿™é—¨è¯¾çš„å­¦ä¹ æ‰“ä¸‹äº†è‰¯å¥½çš„åŸºç¡€ã€‚é€šè¿‡è‡ªå·±åŠ¨æ‰‹é…ç½®å®‰è£…ï¼Œä¸ä»…é”»ç‚¼äº†æˆ‘ä»¬çš„åŠ¨æ‰‹èƒ½åŠ›ï¼Œè¿˜åœ¨è®°å½•å®‰è£…ç¼–è¯‘å¼€å‘çš„è¿‡ç¨‹ä¸­é”»ç‚¼äº†æˆ‘ä»¬æ–‡æ¡£çš„ä¹¦å†™èƒ½åŠ›ï¼Œå¦‚ä½•ç»„ç»‡å¥½è‡ªå·±çš„é…ç½®è¿‡ç¨‹å¹¶ä¸”ç”¨æ–‡æ¡£å½¢å¼è®°å½•æ˜¯ååˆ†é‡è¦çš„ï¼Œä¸ºä»Šåçš„æ›´å¥½çš„å­¦ä¹ linuxæ‰“ä¸‹äº†è‰¯å¥½çš„åŸºç¡€ã€‚
 
 
 
